@@ -4,46 +4,57 @@ class WorldCurrency {
         this.apiURL = apiURL;
 
         // Initialize properties for weather data, setting them as 'Empty' initially
-        this.EURUSD = 'Empty';
-        this.EURGBP = 'Empty';
-        this.GBPUSD = 'Empty';
-        this.USDJPY = 'Empty';
-        this.AUDUSD = 'Empty';
-        this.USDCHF = 'Empty';
-        this.NZDUSD = 'Empty';
-        this.USDCAD = 'Empty';
-        this.USDZAR = 'Empty';
+        // this.EURUSD = 'Empty';
+        // this.EURGBP = 'Empty';
+        // this.GBPUSD = 'Empty';
+        // this.USDJPY = 'Empty';
+        // this.AUDUSD = 'Empty';
+        // this.USDCHF = 'Empty';
+        // this.NZDUSD = 'Empty';
+        // this.USDCAD = 'Empty';
+        // this.USDZAR = 'Empty';
+
+        // Initialize properties for weather data, setting them as 'Empty' initially
+        this.EURUSD = '1.051469';
+        this.EURGBP = '0.867262';
+        this.GBPUSD = '1.2124';
+        this.USDJPY = '149.560385';
+        this.AUDUSD = '0.628811';
+        this.USDCHF = '0.904157';
+        this.NZDUSD = '0.5888';
+        this.USDCAD = '1.36685m';
+        this.USDZAR = '19.007304';
     }
 
     // Asynchronous function to fetch currencyation coordinates using geocoding
     async getCurrency() {
-        // Update the text content in the UI
-        this.updateText();
-
-
+        
+        
         const response = await fetch(apiURL);
         let data = await response.json();
         console.log(data);
-
+        
         if (data.length > 0) {
             // If coordinates are available, store them in instance variables
             this.EURUSD = data.quotes;
             // this.longitude = data[0].lon;
         }
 
+        // Update the text content in the UI
+        // this.updateText();
     }
-
+    
     // Update the text content in the UI based on stored  data
     updateText() {
-        document.querySelector('.EURUSD').textContent = this.EURUSD;
-        document.querySelector('.EURGBP').textContent = this.EURGBP;
-        document.querySelector('.GPBUSD').textContent = this.GPBUSD;
-        document.querySelector('.USDJPY').textContent = this.USDJPY;
-        document.querySelector('.AUDUSD').textContent = this.AUDUSD;
-        document.querySelector('.USDCHF').textContent = this.USDCHF;
-        document.querySelector('.NZDUSD').textContent = this.NZDUSD;
-        document.querySelector('.USDCAD').textContent = this.USDCAD;
-        document.querySelector('.USDZAR').textContent = this.USDZAR;
+        document.getElementById('EURUSD').innerHTML = this.EURUSD;
+        document.getElementById('EURGBP').innerHTML = this.EURGBP;
+        document.getElementById('GBPUSD').innerHTML = this.GBPUSD;
+        document.getElementById('USDJPY').innerHTML = this.USDJPY;
+        document.getElementById('AUDUSD').innerHTML = this.AUDUSD;
+        document.getElementById('USDCHF').innerHTML = this.USDCHF;
+        document.getElementById('NZDUSD').innerHTML = this.NZDUSD;
+        document.getElementById('USDCAD').innerHTML = this.USDCAD;
+        document.getElementById('USDZAR').innerHTML = this.USDZAR;
     }
 }
 
