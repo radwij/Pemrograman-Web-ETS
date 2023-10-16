@@ -36,19 +36,19 @@ class WorldCurrency {
     // Update the text content in the UI based on stored  data
     updateText() {
         document.querySelector('.EURUSD').textContent = this.EURUSD;
-        document.querySelector('.EURGBP').textContent = this.EURUSD;
-        document.querySelector('.GPBUSD').textContent = this.EURUSD;
-        document.querySelector('.USDJPY').textContent = this.EURUSD;
-        document.querySelector('.AUDUSD').textContent = this.EURUSD;
-        document.querySelector('.USDCHF').textContent = this.EURUSD;
-        document.querySelector('.NZDUSD').textContent = this.EURUSD;
-        document.querySelector('.USDCAD').textContent = this.EURUSD;
-        document.querySelector('.USDZAR').textContent = this.EURUSD;
+        document.querySelector('.EURGBP').textContent = this.EURGBP;
+        document.querySelector('.GPBUSD').textContent = this.GPBUSD;
+        document.querySelector('.USDJPY').textContent = this.USDJPY;
+        document.querySelector('.AUDUSD').textContent = this.AUDUSD;
+        document.querySelector('.USDCHF').textContent = this.USDCHF;
+        document.querySelector('.NZDUSD').textContent = this.NZDUSD;
+        document.querySelector('.USDCAD').textContent = this.USDCAD;
+        document.querySelector('.USDZAR').textContent = this.USDZAR;
     }
 }
 
 // Constants for api URLs, etc
-// const apiURL = "http://apilayer.net/api/live?access_key=4d296dd50a0821fab30c219b11fdafbb&pairs=EURUSD,EURGBP,GBPUSD,USDJPY,AUDUSD,USDCHF,NZDUSD,USDCAD,USDZAR";
+const apiURL = "http://apilayer.net/api/live?access_key=4d296dd50a0821fab30c219b11fdafbb&pairs=EURUSD";
 
 
 // Create an instance of WorldCurrency with the provided parameters
