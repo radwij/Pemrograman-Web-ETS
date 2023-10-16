@@ -59,7 +59,8 @@ class WorldCurrency {
 }
 
 // Constants for api URLs, etc
-const apiURL = "http://apilayer.net/api/live?access_key=4d296dd50a0821fab30c219b11fdafbb&pairs=EURUSD";
+const apiURL = "http://apilayer.net/api/live?access_key=4d296dd50a0821fab30c219b11fdafbb&pairs=EURUSD,EURGBP,GBPUSD,USDJPY,AUDUSD,USDCHF,NZDUSD,USDCAD,USDZAR";
+// const apiURL = "http://apilayer.net/api/live?access_key=4d296dd50a0821fab30c219b11fdafbb&pairs=EURUSD";
 
 
 // Create an instance of WorldCurrency with the provided parameters
